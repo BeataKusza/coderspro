@@ -266,3 +266,50 @@ person2.age = 33;
 //modyfikacja ((Set))
 person1.name = 'Grześ';
 person2.name = 'Rafał';
+//wykrywanie wlasciwosci objektow-nieeeeeeee!!!!!!
+var person = {
+  number: 0
+};
+
+if (person.number) {
+  console.log('true');
+} else {
+  console.log('false');
+}
+//tak nie sprawdzamy, bo 0 to jest false
+//ten przyklad jest oki
+var person1 = {
+  name: 'Agnieszka',
+  age: 34
+};
+
+var person2 = {
+  name: 'Jan',
+  age: 43
+}
+wykrywanie czy jakas funkcja instnieje
+
+console.log('name' in person1);  //true
+console.log('age' in person2); // true
+console.log('height' in person1); //false
+
+//2 metoda
+var person1 = {
+name: 'Tomek',
+logName: function () {
+  console.log(this.name);
+}
+);
+
+console.log('name' in person1); //true
+console.log(person1.hasOwnProperty('name')); //true
+console.log('toString' in person1); //true
+console.log(person1.hasOwnProperty('toString')); //false
+//objekty usuwanie wartosci
+var person = {
+  name: 'Andrzej'
+};
+console.log(person.name); //dostaniemy Andrzej
+delete person(name);
+console.log('name' in person); //false
+console.log(person.name); //undefiled
