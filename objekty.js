@@ -30,10 +30,64 @@ function add(a,b) {
   return a + b;
 }
 console.log(typeof.add);
-metoda instance of:
+//metoda instance of://
 var item = [];
 var obj = ();
 
 console.log(item instanceof Array); //true
+console.log(item instanceof Object); //true
 console.log(obj instanceof Object); //true
+console.log(obj instanceof Array); //false
 console.log(add instanceof function); //true
+console.log(add instanceof Object); //true
+
+console.log(Array.isArray(item)); //nowa.metoda
+//typy opakowujace//
+//string,number,boolean//
+var name= 'Paweł';
+var firstCharakter = name.charAt(0);
+console.log(firstCharakter); //wyswieli ilterke p//
+//to co sie dzieje w tle//
+var name = 'Marcin';
+var temporary = newString(name1);
+var firstCharakter1 = temporary.charAt(0);
+temporary = nul1;
+console.log(firstCharakter1); //wystwielka sie literka M//
+
+var name = 'Grzesiek';
+name.last = 'Kowalski';
+console.log(name.last);//underfiled
+//w temporaty.charAt (i tutaj mozna cos zrobic np. function...)//
+var name = 'Zosia';
+var temp = new String(name2);
+temp.last = 'Kowalska';
+temp = null;
+var temp = new String(name2);
+console.log(temp.last); //underfiled
+temp = null;
+//
+var name3 = 'Genowefa';
+var count = 10;
+var found = false;
+jezeli do zmiennne  przypisujeym stringa to typ prosty. wywoalnie mteody-charAt9O w tle js tymczasowo temporaty zrobi..
+zniszczyobjekt, i powroci do typu prostego
+console.log(name3 instanceof String); //false
+console.log(count instanceof Number); //false
+console.log(found instanceof Boolean); //false
+//
+var name4 = new String('Genowefa');
+var count1 = new Number(10);
+var found1 = new Boolean(false);
+
+console.log(typeof name4); //
+console.log(typeof count1);
+console.log(typeof found1);
+//
+var founded = new Boolean(false);
+
+if (founded) {
+  console.log('I found a variable');
+} else {
+  console.log('I haven"t found a variable');
+}
+//sprawdza czy on istnieje wiec wyswietli 'I found a variable'
