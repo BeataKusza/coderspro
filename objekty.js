@@ -69,7 +69,7 @@ temp = null;
 var name3 = 'Genowefa';
 var count = 10;
 var found = false;
-jezeli do zmiennne  przypisujeym stringa to typ prosty. wywoalnie mteody-charAt9O w tle js tymczasowo temporaty zrobi..
+jezeli do zmiennne  przypisujemy stringa to typ prosty. wywoalnie mteody-charAt9O w tle js tymczasowo temporaty zrobi..
 zniszczyobjekt, i powroci do typu prostego
 console.log(name3 instanceof String); //false
 console.log(count instanceof Number); //false
@@ -91,3 +91,21 @@ if (founded) {
   console.log('I haven"t found a variable');
 }
 //sprawdza czy on istnieje wiec wyswietli 'I found a variable'
+//
+//funkcje -tez sa objektami i typami referencyjnymi
+//wlasciwosc typu function[(Cell)]-objekt moze zostac wykonany
+1. var function
+2. function()
+//deklaracja funkcji
+var sum = add(3, 4);
+console.log(sum);//wyswietli sie 7
+
+function add(a,b) {
+  return a + b;
+};
+//wyrazenie funkcji
+var result = add(3, 4)
+console.log(result); //blad
+var add = function(a, b) {
+  return a + b;
+};
