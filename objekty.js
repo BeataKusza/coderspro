@@ -4,7 +4,7 @@ literał var obj1 = ()
 var obj = obj.prototype...
 garbage colection odsmiecanie pamieci obj = gabl;?
 obj.new =  'one'()
-Literałyobjetków
+Literały objektow
 export default Class
 
 1. var car1 = {
@@ -120,7 +120,7 @@ var sayHallo2 = sayHallo;
 
 //
 var numbers = [1, 45, 2, 4, 6, 78, 11};
-numbers.sort(funtion(a, b) {
+numbers.sort(function(a, b) {
   return (a + b);
 });
 console.log(numbers.sort);
@@ -216,7 +216,7 @@ var person2 = {
   sayHello: allSayHello
 };
 var name = 'Kinga';
- console.log(person1.sayHello()); //Piot
+ console.log(person1.sayHello()); //Piotr
  console.log(person2.sayHello()); //Karol
  controle.log(allSayHello()); //Kinga
 //modyfikacja this
@@ -313,3 +313,23 @@ console.log(person.name); //dostaniemy Andrzej
 delete person(name);
 console.log('name' in person); //false
 console.log(person.name); //undefiled
+//napisz funkcje , wywolanie metody, tablics ze stringami red,green,blue
+
+function keys(obj) {
+var arrKeys = []
+var key;
+for (key in obj) {
+  if(obj,hasOwnProperty(key)) {
+    arrKeys.push(key)
+  }
+}
+return arrKeys;
+}
+
+var obj = (
+  red: 'dashed'
+  green: 'xasxxs'
+  blue:'sbjasd'
+);
+
+console.log(keys(obj)); //[red,green,blue]
