@@ -109,3 +109,85 @@ console.log(result); //blad
 var add = function(a, b) {
   return a + b;
 };
+
+//funcja jako wartosc
+function sayHello() {
+  console.log('Hi')
+;}
+
+sayHello();
+var sayHallo2 = sayHallo;
+
+//
+var numbers = [1, 45, 2, 4, 6, 78, 11};
+numbers.sort(funtion(a, b) {
+  return (a + b);
+});
+console.log(numbers.sort);
+
+var foo = numbers.sort(function (a, b) {
+  return a - b;
+});
+console.log(foo);
+//parametry funckcji//
+
+function show(value) {
+  return value;
+}
+//array.isArray(argument)- false
+console.log(show('Hi'));
+console.log(show('Hi', 34));
+console.log(show.lenght);//arność funcji-lenght
+
+show = function () {
+  return arguments[0];
+}
+
+console.log(show('Hello')); //Hello
+console.log(show('Hello', 45)); //'hello'
+console.log(show.lenght); //0
+--zwracanie sumy danej parametrow, ale nie wiemy jaka bedzie ilosc takich parametrow(wyzej)
+function sum() {
+  var result = 0;
+  var len = argument.length;
+  var i = 0;
+
+while(i < len) {
+  result ( += arguments[i]);
+  i++;
+}
+return result;
+}
+
+console.log(sum(i,5)); //6
+console.log(sum(4,5,7)); //16
+console.log(sum(3)); //3
+console.log(i); //0
+//
+over loading-przeciazenia
+void funkcja (int);
+void funkcja (int, char);
+
+function message(mes) {
+  console.log(mes);
+}
+
+function message() {
+  console.log('Default');
+}
+message('Hello');
+//dostaniemy Default, wyswietla ostatni parametr,kotry ptzypisalismy
+==
+var message = new Function('message', 'console.log(message)');
+message = new Function ('console log('Default')');
+message('Hello');
+//
+function message (message) {
+  if(arguments.lenght === 0) {
+    message = 'Default';
+  }
+  console.log(message);
+}
+
+console.log(message('Hello')); // wyswietli sie Hello
+console.log(message()); // Default
