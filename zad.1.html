@@ -1,0 +1,24 @@
+function markRow(id) {
+var el = document.querySelector('.mark');
+var el1 = document.querySelectorAll('.mark');
+var tab= document.getElementById(id);
+var id= tab.getElementByTagName('td');
+
+for (var x=0; x<td.length; x++){
+td[x].addEventListener('mouseover', function() {
+this.parentNode.classList.add('mark');
+}};
+td[x].addEventListener('mouseout', function() {
+this.parentNode.classList.remove('mark');
+});
+}
+}
+document.addEventListener('DOMContentLoaded', function(){
+markRow('tabelka');
+});
+var p = document.querySelector('#paragraf');
+
+console.log(p.parentNode);
+console.log(p.childNodes[1]);
+console.log(p.childNodes[1].firstChild);
+console.log(lastChild);
