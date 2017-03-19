@@ -252,3 +252,17 @@ console.log(logNameAll2()); //person2: Michael
 
 person2.logName = logNameAll1;
 console.log(person2.logName('person2')); //person2: Piter
+...
+//objekty, dzialania modyfikacje
+var person1 = {
+  name: 'Paweł';
+}
+
+var person2 = new Object ();
+//dodanie. wywoluje metode ((Put))
+person2.name = 'Beata';
+person1.age = 22;
+person2.age = 33;
+//modyfikacja ((Set))
+person1.name = 'Grześ';
+person2.name = 'Rafał';
