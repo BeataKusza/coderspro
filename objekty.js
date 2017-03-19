@@ -191,3 +191,51 @@ function message (message) {
 
 console.log(message('Hello')); // wyswietli sie Hello
 console.log(message()); // Default
+//objekt this
+var person = (
+  name: 'Piotr',
+  logName: function () {
+    console.log(person.name)
+  }
+);
+
+person.logName(); //dostaniemy Piotr
+or console.log(this.name)
+this.logName(); //kontekst wywolania funcji
+..
+function allSayHello() {
+  controle.log(this.name)
+}
+
+var person1 = {
+  name: 'Peter',
+  sayHello: allSayHello
+};
+var person2 = {
+  name: 'Karol',
+  sayHello: allSayHello
+};
+var name = 'Kinga';
+ console.log(person1.sayHello()); //Piot
+ console.log(person2.sayHello()); //Karol
+ controle.log(allSayHello()); //Kinga
+//modyfikacja this
+call()
+function logName(arg) {
+  console.log(arg + "i" + this.name);
+}
+
+var person1 = {
+  name: 'Piter',
+};
+
+var person2 = {
+  name: 'Michael',
+};
+
+var name = 'Michaelie';
+
+logNameAll.cell(this.'global');//wywolywanie metody , wyswietli global: Michaelie
+logNameAll.cell(person1,'person1'); //person1: Piter
+logNameAll.cell(person2,'person2');//person2: Micheal
+...
